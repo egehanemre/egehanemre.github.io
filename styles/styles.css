@@ -1,0 +1,620 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root {
+  --color-primary: #191d2b;
+  --color-secondary: #27AE60;
+  --color-white: #FFFFFF;
+  --color-black: #000;
+  --color-grey0: #f8f8f8;
+  --color-grey1: #dbe1e8;
+  --color-grey2: #b2becd;
+  --color-grey3: #6c7983;
+  --color-grey4: #454e56;
+  --color-grey5: #2a2e35;
+  --color-grey6: #12181b;
+  --br-sm-2: 14px;
+}
+
+body {
+  background-color: var(--color-primary);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  color: var(--color-grey0);
+  transition: all 0.4s ease-in-out;
+}
+
+.button-style {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 20px;
+  display: block;
+  color: var(--color-white);
+}
+
+p, h1 {
+  text-shadow: 2px 2px 20px #27AE60;
+}
+
+h3 {
+  text-shadow: 2px 2px 15px var(--color-black);
+}
+
+p2 {
+  color: greenyellow;
+  text-shadow: 1px 1px 15px var(--color-secondary);
+}
+
+.year {
+  text-shadow: 1px 1px 5px var(--color-black);
+}
+
+
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+header {
+  position: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 120px;
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.portrait {
+  margin-top: 25px;
+  width: 100%;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.portrait img {
+  height: 250px;
+  width: 250px; 
+  border-radius: 50%;
+  margin-top: 5px
+}
+
+.portrait p{
+  font-size: 45px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px; 
+  margin-top: 30px;
+}
+
+.icon-container a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+.icon-container i {
+  font-size: 35px;
+  margin: 0 10px; 
+}
+
+.icon-container a:hover {
+  transform: scale(1.2); 
+}
+
+/* No issue on top */
+.controls{
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically center the buttons */
+  flex-direction: row; /* Allow buttons to wrap to the next line if necessary */
+}
+
+.button_controls {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically center the buttons */
+  flex-direction: column; /* Allow buttons to wrap to the next line if necessary */
+  margin-top: -10px; /* Adjust as needed */
+}
+
+.button_controls a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#button{
+  text-align: center;
+  border-color: var(--color-grey6);
+}
+
+/*Button on click change color*/
+.controls .active-btn {
+  background-color: var(--color-secondary) !important;
+  transition: all 0.4s ease-in-out;
+}
+
+/*Button on click change color*/
+.controls .active-btn i, .controls .active-btn span {
+  color: var(--color-grey6) !important;
+}
+
+/*Control is for inside the buttons and the style of buttons such as width*/
+.button-style {
+  padding: 1rem;
+  cursor: pointer;
+  background-color: var(--color-grey4);
+  width: 200px;
+  min-width: 25px;
+  height: 55px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.button-style:hover {
+  transform: scale(1.1); 
+  transition: transform 0.2s ease-in-out; 
+}
+
+.button-style i {
+  margin-right: 15px;
+}
+
+#about_me {
+  text-align: center;
+  max-width: 900px;
+  padding: 20px;
+  margin: 0 auto;
+  font-size: 1rem; /* Default font size for larger screens */
+}
+
+section{
+  height: auto;
+  display: fixed;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  text-align: center;
+}
+
+.one {
+  background-color: var(--color-primary);
+
+}
+.two {
+  background-color: var(--color-primary);
+}
+.three {
+  background-color: var(--color-primary);
+}
+.four {
+  background-color: var(--color-primary);
+}
+
+.pages section {
+  display: none;
+  margin-top: 25px;
+}
+
+.work-inside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: auto;
+  padding-bottom: 5rem;
+}
+
+.work-inside .work-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.work-row .work-column {
+  flex: 1 1 20rem;
+  margin-left: 15vh;
+  margin-right: 15vh;
+}
+
+.work-column .title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+
+
+.work-box .work-content {
+  position: relative;
+}
+
+.work-box .work-content a{
+  color: red;
+  text-shadow: 4px 4px 10px;
+}
+
+.work-box .work-content p5{
+  color: goldenrod;
+}
+
+.work-content .content {
+  position: relative;
+  padding: 1rem;
+  border: .2rem solid var(--color-secondary);
+  border-radius: .6rem;
+  margin-bottom: 2rem;
+}
+
+.work-content .content .year {
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+  padding-bottom: .5rem;
+}
+
+.work-content .content .year i {
+ padding-right: .5rem;
+}
+
+.work-content .content {
+  text-align: left;
+}
+/*work under*/
+
+.edu-inside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: auto;
+  padding-bottom: 5rem;
+}
+
+.edu-inside .education-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.education-row .education-column {
+  flex: 1 1 40rem;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.education-column .title {
+  font-size: 2.5rem;
+  margin: 0 0 1.5rem 2rem;
+}
+
+.education-column .education-box {
+  border-left: .2rem solid var(--color-secondary);
+}
+
+.education-box .education-content {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.education-box .education-content:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1.1rem;
+  width: 2rem;
+  height: 2rem;
+  background: var(--color-secondary);
+  border-radius: 50%;
+}
+
+.education-content .content {
+  position: relative;
+  padding: 1rem;
+  border: .2rem solid var(--color-secondary);
+  border-radius: .6rem;
+  margin-bottom: 2rem;
+}
+
+.education-content .content .year {
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+  padding-bottom: .5rem;
+}
+
+.education-content .content .year i {
+ padding-right: .5rem;
+}
+
+.education-content .content {
+  text-align: left;
+}
+
+.skills-inside {
+  min-height: auto;
+  padding-bottom: 7rem;
+}
+
+.skills-inside .skills-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0rem;
+}
+
+.skills-row .skills-column{
+  flex: 1 1 40rem;
+}
+
+.skills-column .title {
+  font-size: 2.5rem;
+  margin: 0 0 1.5rem;
+}
+
+.skills-box {
+  margin-bottom: 25px;
+}
+
+.skills-box .skills-content {
+  position: relative;
+  border: .2rem solid var(--color-secondary);
+  border-radius: .6rem;
+  padding: .5rem 1.5rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.skills-box .skills-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--color-grey5);
+  z-index: -1;
+  transition: .5s;
+}
+
+.skills-box .skills-content:hover:before {
+  width: 100%;
+}
+
+
+.skills-content .progress{
+  padding: 1rem 0;
+}
+
+.skills-content .progress h3 {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills-content .progress h3 span {
+  color: var(--color-white);
+}
+
+.skills-content .progress .bar {
+  height: 2.5rem;
+  border-radius: .6rem;
+  border: .2rem solid var(--color-secondary);
+  padding: .5rem;
+  margin: .1rem 0;
+}
+
+.skills-content .progress .bar span {
+  display: block;
+  height: 100%;
+  border-radius: .3rem;
+  background-color: var(--color-grey1);
+}
+
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span{
+  width: 80%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span{
+  width: 75%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span{
+  width: 75%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span{
+  width: 70%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(5) .bar span{
+  width: 50%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span{
+  width: 80%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span{
+  width: 65%;
+}
+
+@media screen and (max-width: 1200px) {
+
+  .work-row .work-column {
+    flex: 1 1 20rem;
+    margin-left: 8vh;
+    margin-right: 8vh;
+  }
+
+}
+
+
+@media screen and (max-width: 880px) {
+
+    /* Reduce the font size of buttons and their contents */
+
+    .button-style {
+      font-size: 2vw; /* Adjust the font size as needed */
+      padding: 0.5rem; /* Adjust the padding as needed */
+    }
+  
+    /* Reduce the font size of the active button */
+    .controls .active-btn {
+      font-size: 2vw; /* Adjust the font size as needed */
+    }
+
+    .button-style {
+      width: 19vw;
+      height: 55px;
+    }
+
+    .button-style i {
+      margin-right: 10px;
+    }
+
+    #about_me {
+      text-align: center;
+      max-width: 800px;
+      padding: 20px;
+      margin: 0 auto;
+      font-size: 0.9rem; /* Default font size for larger screens */
+    }
+
+    .icon-container i {
+      font-size: 31px;
+      margin: 0 10px; 
+    }
+
+    .work-row .work-column {
+      flex: 1 1 20rem;
+      margin-left: 5vh;
+      margin-right: 5vh;
+    }
+
+  }
+
+  @media screen and (max-width: 700px) {
+
+    .button-style {
+      font-size: 1.7vw; /* Adjust the font size as needed */
+      padding: 0.5rem; /* Adjust the padding as needed */
+      margin: 0 7px;
+    }
+  
+    /* Reduce the font size of the active button */
+    .controls .active-btn {
+      font-size: 1.7vw; /* Adjust the font size as needed */
+    }
+
+    .button-style {
+      width: 17vw;
+      height: 40px;
+    }
+
+    .button-style i {
+      margin-right: 15px;
+    }
+
+    #about_me {
+      text-align: center; /* Align text to the left */
+      max-width: 100%;
+      min-width: 575px;
+      padding: 20px;
+      margin: 0;
+      font-size: 0.85rem;
+      margin-top: -25px;
+    }
+
+    .icon-container i {
+      font-size: 28px;
+      margin: 0 10px; 
+    }
+
+}
+
+    @media screen and (max-width: 500px) {
+      
+      .button-style {
+        width: px;
+        height: 50px;
+      }
+
+      .controls span {
+        display: none;
+      }
+
+      .control-text-icon i {
+        font-size: 20px;
+        margin: 0 auto; /* Center horizontally */
+        text-align: center; /* Additional centering for text within the <i> tags, if needed */
+      }
+
+      #about_me {
+        text-align: center; /* Align text to the left */
+        max-width: 100%;
+        min-width: 400px;
+        padding: 20px;
+        margin: 0;
+        font-size: 0.7rem;
+        margin-top: -25px;
+      }
+
+      .button_controls {
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Vertically center the buttons */
+        flex-direction: column; /* Allow buttons to wrap to the next line if necessary */
+        margin-top: -25px; /* Adjust as needed */
+      }
+      
+      .icon-container i {
+        font-size: 25px;
+        margin: 0 10px; 
+      }
+
+      .skills-content .progress h3 {
+        font-size: .87rem;
+      }
+      
+    }
+      @media screen and (max-width: 400px) {
+      
+      #about_me {
+        text-align: center; /* Align text to the left */
+        max-width: 100%;
+        min-width: 320px;
+        padding: 20px;
+        margin: 0;
+        font-size: 0.60rem;
+        margin-top: -25px;
+      }
+
+      .button_controls {
+        margin-top: -25px; /* Adjust as needed */
+      }
+    }
+
+
