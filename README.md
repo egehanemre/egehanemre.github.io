@@ -1,7 +1,7 @@
 # Eggy3.github.io
 
 # PERSONAL PORTFOLIO WEBSITE
-#### Video Demo:  <https://www.youtube.com/watch?v=x7yJ7u7sBdw>
+#### Video Demo for cs50:  <https://www.youtube.com/watch?v=x7yJ7u7sBdw>
 
 
 Hey there,
