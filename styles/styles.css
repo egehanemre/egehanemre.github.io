@@ -6,7 +6,7 @@
 }
 
 :root {
-  --color-primary: #191d2b;
+  --color-primary: #13151e;
   --color-secondary: #27AE60;
   --color-white: #FFFFFF;
   --color-black: #000;
@@ -38,7 +38,7 @@ body {
 }
 
 p, h1 {
-  text-shadow: 2px 2px 20px #27AE60;
+  text-shadow: 1px 1px 10px #000000;
 }
 
 h3 {
@@ -53,6 +53,7 @@ p2 {
 .year {
   text-shadow: 1px 1px 5px var(--color-black);
 }
+
 
 
 
@@ -308,16 +309,16 @@ section{
   margin: 0 0 1.5rem 2rem;
 }
 
-.education-column .education-box {
+.work-column .work-box {
   border-left: .2rem solid var(--color-secondary);
 }
 
-.education-box .education-content {
+.work-box .work-content {
   position: relative;
   padding-left: 2rem;
 }
 
-.education-box .education-content:before {
+.work-box .work-content:before {
   content: '';
   position: absolute;
   top: 0;
@@ -374,20 +375,24 @@ section{
   font-size: 2.5rem;
   margin: 0 0 1.5rem;
 }
-
 .skills-box {
   margin-bottom: 25px;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
 }
 
 .skills-box .skills-content {
   position: relative;
-  border: .2rem solid var(--color-secondary);
+  border: .2rem var(--color-grey1);
   border-radius: .6rem;
   padding: .5rem 1.5rem;
   margin-left: 4rem;
   margin-right: 4rem;
   z-index: 1;
   overflow: hidden;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
 }
 
 .skills-box .skills-content::before {
@@ -399,15 +404,9 @@ section{
   height: 100%;
   background: var(--color-grey5);
   z-index: -1;
-  transition: .5s;
 }
 
-.skills-box .skills-content:hover:before {
-  width: 100%;
-}
-
-
-.skills-content .progress{
+.skills-content .progress {
   padding: 1rem 0;
 }
 
@@ -437,42 +436,30 @@ section{
   background-color: var(--color-grey1);
 }
 
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span{
-  width: 80%;
+/* New styles for badges */
+.badge-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Space between badges */
+  justify-content: center; /* Center the badges horizontally */
 }
 
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span{
-  width: 75%;
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span{
-  width: 75%;
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span{
-  width: 75%;
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(5) .bar span{
-  width: 70%;
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(6) .bar span{
-  width: 70%;
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(7) .bar span{
-  width: 50%;
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span{
-  width: 80%;
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span{
-  width: 65%;
+.badge {
+  background-color: var(--color-grey5)  ;
+  color: white;
+  padding: 10px 20px; /* Adjusted padding to match button style */
+  border-radius: 20px;
+  font-size: 16px; /* Adjusted font size to match button style */
+  text-align: center;
+  white-space: nowrap;
+  border: .2rem var(--color-grey3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px; /* Adjusted height to match button style */
 }
 
 @media screen and (max-width: 1200px) {
@@ -482,9 +469,7 @@ section{
     margin-left: 8vh;
     margin-right: 8vh;
   }
-
 }
-
 
 @media screen and (max-width: 880px) {
 
