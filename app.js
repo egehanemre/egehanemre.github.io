@@ -7,6 +7,20 @@ const section_scroll = document.querySelectorAll('.pages section');
 
 // Add click event listeners to each button
 
+document.querySelectorAll('.project-button').forEach(button => {
+    button.addEventListener('click', () => {
+        document.querySelectorAll('.project-button').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        button.classList.add('active');
+
+        const projectId = button.getAttribute('data-project');
+        document.querySelectorAll('.project-content').forEach(content => {
+            content.classList.remove('active');
+        });
+        document.getElementById(projectId).classList.add('active');
+    });
+});
 
 function PageTransitions() {
     buttons.forEach((button) => {

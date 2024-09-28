@@ -462,6 +462,45 @@ section{
   height: 55px; /* Adjusted height to match button style */
 }
 
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.project-button {
+  width: 150px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.project-button:hover {
+  background-color: #e0e0e0;
+}
+
+.project-button.active {
+  background-color: green;
+  color: white;
+}
+
+.project-content {
+  display: none;
+  margin-top: 20px;
+}
+
+.project-content.active {
+  display: block;
+}
+
 @media screen and (max-width: 1200px) {
 
   .work-row .work-column {
