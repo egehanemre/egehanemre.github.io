@@ -463,7 +463,7 @@ section{
 }
 
 .project-button {
-  width: 250px;
+  width: 205px;
   height: 150px;
   background-color: #f0f0f0;
   border: 3px solid #ffffff; /* Increase border width */
@@ -500,8 +500,35 @@ section{
 }
 
 .project-content {
-  display: none; /* Hide all project content by default */
+  margin-bottom: 20px;
+  display: none; /* Hide the project content by default */
 }
+
+.project-details {
+  display: flex;
+  align-items: center;
+}
+
+.project-details img {
+  margin-top: 50px;
+  max-width: 600px;
+  margin-right: 20px;
+  margin-left: 150px;
+}
+
+.project-text {
+  max-width: 600px;
+}
+
+
+.project-text h1 {
+  margin-top: 0;
+}
+
+.project-text p {
+  margin: 0;
+}
+
 
 .project-content.active {
   display: block; /* Show the active project content */
