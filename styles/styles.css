@@ -54,9 +54,6 @@ p2 {
   text-shadow: 1px 1px 5px var(--color-black);
 }
 
-
-
-
 a {
   display: inline-block;
   text-decoration: none;
@@ -122,20 +119,19 @@ header {
   transform: scale(1.2); 
 }
 
-/* No issue on top */
 .controls{
   display: flex;
   justify-content: center;
-  align-items: center; /* Vertically center the buttons */
-  flex-direction: row; /* Allow buttons to wrap to the next line if necessary */
+  align-items: center; 
+  flex-direction: row; 
 }
 
 .button_controls {
   display: flex;
   justify-content: center;
-  align-items: center; /* Vertically center the buttons */
-  flex-direction: column; /* Allow buttons to wrap to the next line if necessary */
-  margin-top: -10px; /* Adjust as needed */
+  align-items: center; 
+  flex-direction: column; 
+  margin-top: -10px;
 }
 
 .button_controls a {
@@ -149,18 +145,16 @@ header {
   border-color: var(--color-grey6);
 }
 
-/*Button on click change color*/
 .controls .active-btn {
   background-color: var(--color-secondary) !important;
   transition: all 0.4s ease-in-out;
 }
 
-/*Button on click change color*/
 .controls .active-btn i, .controls .active-btn span {
   color: var(--color-grey6) !important;
 }
 
-/*Control is for inside the buttons and the style of buttons such as width*/
+
 .button-style {
   padding: 1rem;
   cursor: pointer;
@@ -173,6 +167,7 @@ header {
   justify-content: center;
   align-items: center;
   margin: 0 10px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .button-style:hover {
@@ -189,7 +184,7 @@ header {
   max-width: 900px;
   padding: 20px;
   margin: 0 auto;
-  font-size: 1rem; /* Default font size for larger screens */
+  font-size: 1rem; 
 }
 
 section{
@@ -281,7 +276,6 @@ section{
 .work-content .content {
   text-align: left;
 }
-/*work under*/
 
 .edu-inside {
   display: flex;
@@ -378,7 +372,7 @@ section{
 .skills-box {
   margin-bottom: 25px;
   display: flex;
-  justify-content: center; /* Center the content horizontally */
+  justify-content: center; 
 }
 
 .skills-box .skills-content {
@@ -391,8 +385,8 @@ section{
   z-index: 1;
   overflow: hidden;
   display: flex;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
+  justify-content: center; 
+  align-items: center; 
 }
 
 .skills-box .skills-content::before {
@@ -436,30 +430,29 @@ section{
   background-color: var(--color-grey1);
 }
 
-/* New styles for badges */
 .badge-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; /* Space between badges */
-  justify-content: center; /* Center the badges horizontally */
+  gap: 10px; 
+  justify-content: center; 
 }
 
 .badge {
   background-color: var(--color-grey5)  ;
   color: white;
-  padding: 10px 20px; /* Adjusted padding to match button style */
+  padding: 10px 20px; 
   border-radius: 20px;
-  font-size: 16px; /* Adjusted font size to match button style */
+  font-size: 16px; 
   text-align: center;
   white-space: nowrap;
   border: .2rem var(--color-grey3);
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 55px; /* Adjusted height to match button style */
+  height: 55px; 
 }
 
 .projects-container {
@@ -470,35 +463,48 @@ section{
 }
 
 .project-button {
-  width: 150px;
-  height: 100px;
+  width: 250px;
+  height: 150px;
   background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 3px solid #ffffff; /* Increase border width */
+  border-radius: 15px; /* Increase border radius for smoother edges */
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 16px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, border-color 0.3s; /* Add transition for border color */
+  padding: 0; /* Remove padding to ensure the image fills the button */
+  overflow: hidden; /* Ensure the image does not overflow the button */
+  position: relative; /* Ensure the image can be positioned absolutely */
+  outline: none; /* Remove the default focus outline */
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight color on mobile devices */
 }
 
-.project-button:hover {
-  background-color: #e0e0e0;
+.project-button:focus {
+  outline: none; /* Remove the default focus outline when the button is focused */
 }
 
 .project-button.active {
-  background-color: green;
-  color: white;
+  border-color: green; /* Change border color when active */
+}
+
+.project-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire button */
+  position: absolute; /* Position the image absolutely within the button */
+  top: 0;
+  left: 0;
+  transition: transform 0.3s; /* Add transition for hover effect */
 }
 
 .project-content {
-  display: none;
-  margin-top: 20px;
+  display: none; /* Hide all project content by default */
 }
 
 .project-content.active {
-  display: block;
+  display: block; /* Show the active project content */
 }
 
 @media screen and (max-width: 1200px) {

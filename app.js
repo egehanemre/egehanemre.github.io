@@ -9,15 +9,19 @@ const section_scroll = document.querySelectorAll('.pages section');
 
 document.querySelectorAll('.project-button').forEach(button => {
     button.addEventListener('click', () => {
+        // Remove 'active' class from all project buttons
         document.querySelectorAll('.project-button').forEach(btn => {
             btn.classList.remove('active');
         });
+        // Add 'active' class to the clicked button
         button.classList.add('active');
 
         const projectId = button.getAttribute('data-project');
+        // Remove 'active' class from all project contents
         document.querySelectorAll('.project-content').forEach(content => {
             content.classList.remove('active');
         });
+        // Add 'active' class to the corresponding project content
         document.getElementById(projectId).classList.add('active');
     });
 });
