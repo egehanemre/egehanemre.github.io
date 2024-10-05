@@ -499,40 +499,57 @@ section{
   transition: transform 0.3s; /* Add transition for hover effect */
 }
 
+.project-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .project-content {
   margin-bottom: 20px;
   display: none; /* Hide the project content by default */
+  text-align: center; /* Center the header */
 }
 
 .project-details {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start; /* Align items to the start */
+  width: 100%; /* Ensure the project details take the full width */
 }
 
 .project-details img {
   margin-top: 50px;
   max-width: 600px;
   margin-right: 20px;
-  margin-left: 150px;
+  margin-left: 20px;
 }
 
+
 .project-text {
-  max-width: 600px;
+  flex: 1; /* Take up remaining space */
+  text-align: left; /* Align text to the left */
 }
 
 
 .project-text h1 {
   margin-top: 0;
+  text-align: center; /* Center the header */
+  width: 100%; /* Ensure the header takes the full width of the parent */
 }
 
 .project-text p {
   margin: 0;
 }
 
-
 .project-content.active {
   display: block; /* Show the active project content */
 }
+
+.project-text mark {
+  background-color: transparent;
+  color: rgb(62, 80, 45);
+}
+
 
 @media screen and (max-width: 1200px) {
 
@@ -584,7 +601,6 @@ section{
       margin-left: 5vh;
       margin-right: 5vh;
     }
-
   }
 
   @media screen and (max-width: 700px) {
