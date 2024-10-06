@@ -537,8 +537,36 @@ section{
   width: 100%; /* Ensure the header takes the full width of the parent */
 }
 
+.project-text h4 {
+  margin-top: 0;
+  text-align: center; /* Center the header */
+  width: 100%; /* Ensure the header takes the full width of the parent */
+}
+
 .project-text p {
-  margin: 0;
+  margin-bottom: 0.6%;
+  margin-left: 15%;
+  margin-right: 15%;
+  color: rgb(153, 153, 153);
+}
+
+.project-text a {
+  color: rgb(255, 255, 255);
+}
+
+
+.project-text h2 {
+  margin-top: 20px;
+  margin-left: 190px;
+  margin-right: 190px;
+  color: rgb(247, 247, 247);
+}
+
+.project-text h3 {
+  margin-bottom: 1%;
+  margin-top: 20px;
+  margin-left: 14%;
+  margin-right: 14%;
 }
 
 .project-content.active {
@@ -550,6 +578,20 @@ section{
   color: rgb(62, 80, 45);
 }
 
+.project-images {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* Adjust the margin as needed */
+  margin-left: 15%; /* Same as text margin */
+  margin-right: 15%; /* Same as text margin */
+}
+
+.project-images img {
+  justify-content: center;
+  width: 600px;
+  height: 300px;
+  border-radius: 5px; /* Optional: Add border radius for rounded corners */
+}
 
 @media screen and (max-width: 1200px) {
 
