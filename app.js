@@ -9,20 +9,29 @@ const section_scroll = document.querySelectorAll('.pages section');
 
 document.querySelectorAll('.project-button').forEach(button => {
     button.addEventListener('click', () => {
+        // Check if the button is already active
+        const isActive = button.classList.contains('active');
+
         // Remove 'active' class from all project buttons
         document.querySelectorAll('.project-button').forEach(btn => {
             btn.classList.remove('active');
         });
-        // Add 'active' class to the clicked button
-        button.classList.add('active');
+
+        // If the button was not active, add the 'active' class to the clicked button
+        if (!isActive) {
+            button.classList.add('active');
+        }
 
         const projectId = button.getAttribute('data-project');
         // Remove 'active' class from all project contents
         document.querySelectorAll('.project-content').forEach(content => {
             content.classList.remove('active');
         });
-        // Add 'active' class to the corresponding project content
-        document.getElementById(projectId).classList.add('active');
+
+        // If the button was not active, add the 'active' class to the corresponding project content
+        if (!isActive) {
+            document.getElementById(projectId).classList.add('active');
+        }
     });
 });
 
@@ -75,6 +84,5 @@ function PageTransitions() {
         });
     });
 }
-
 
 PageTransitions();

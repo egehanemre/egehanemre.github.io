@@ -240,15 +240,12 @@ section{
   margin-bottom: 20px;
 }
 
-
-
 .work-box .work-content {
   position: relative;
 }
 
 .work-box .work-content a{
   color: red;
-  text-shadow: 4px 4px 10px;
 }
 
 .work-box .work-content p5{
@@ -259,8 +256,7 @@ section{
   position: relative;
   padding: 1rem;
   border: .2rem solid var(--color-secondary);
-  border-radius: .6rem;
-  margin-bottom: 2rem;
+  border-radius: .9rem;
 }
 
 .work-content .content .year {
@@ -346,9 +342,10 @@ section{
 }
 
 .education-content .content a{
-  color: red;
-  text-shadow: 4px 4px 10px;
+  color: #FF0000;
+  text-shadow: 1px 1px 3px;
 }
+
 
 .skills-inside {
   min-height: auto;
@@ -541,13 +538,14 @@ section{
   margin-top: 0;
   text-align: center; /* Center the header */
   width: 100%; /* Ensure the header takes the full width of the parent */
+  color: rgb(67, 161, 255);
 }
 
 .project-text p {
   margin-bottom: 0.6%;
   margin-left: 15%;
   margin-right: 15%;
-  color: rgb(153, 153, 153);
+  color: rgba(255, 255, 255, 0.719);
 }
 
 .project-text a {
@@ -575,7 +573,7 @@ section{
 
 .project-text mark {
   background-color: transparent;
-  color: rgb(62, 80, 45);
+  color: rgba(253, 253, 253, 0.994);
 }
 
 .project-images {
@@ -589,8 +587,15 @@ section{
 .project-images img {
   justify-content: center;
   width: 600px;
-  height: 300px;
+  height: 338px;
   border-radius: 5px; /* Optional: Add border radius for rounded corners */
+}
+.project-images2 img {
+  justify-content: center;
+  width: 900px;
+  height: 550px;
+  border-radius: 5px; /* Optional: Add border radius for rounded corners */
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 1200px) {
