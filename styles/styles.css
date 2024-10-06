@@ -598,6 +598,10 @@ section{
   margin-top: 20px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media screen and (max-width: 1200px) {
 
   .work-row .work-column {

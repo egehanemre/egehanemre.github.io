@@ -30,7 +30,14 @@ document.querySelectorAll('.project-button').forEach(button => {
 
         // If the button was not active, add the 'active' class to the corresponding project content
         if (!isActive) {
-            document.getElementById(projectId).classList.add('active');
+            const projectContent = document.getElementById(projectId);
+            projectContent.classList.add('active');
+
+            // Scroll to the project-details div within the active project content
+            const projectDetails = projectContent.querySelector('.project-details');
+            if (projectDetails) {
+                projectDetails.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     });
 });
@@ -63,6 +70,11 @@ function PageTransitions() {
             const targetSection = document.getElementById(targetSectionId);
             if (targetSection) {
                 targetSection.style.display = isActive ? 'none' : 'block';
+
+                // Smooth scroll to the target section
+                if (!isActive) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
             }
 
             // Toggle the display of the edu-inside section
