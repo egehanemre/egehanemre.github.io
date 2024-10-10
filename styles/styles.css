@@ -602,16 +602,57 @@ html {
   scroll-behavior: smooth;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1440px) {
 
   .work-row .work-column {
     flex: 1 1 20rem;
     margin-left: 8vh;
     margin-right: 8vh;
   }
+
+  .project-images img {
+    justify-content: center;
+    width: 500px;
+    height: 295px;
+    border-radius: 5px; /* Optional: Add border radius for rounded corners */
+    margin-bottom: 15px;
+  }
+
+  .project-images2 img {
+    justify-content: center;
+    width: 1000px;
+    height: 562px;
+    border-radius: 5px; /* Optional: Add border radius for rounded corners */
+  }
 }
 
-@media screen and (max-width: 880px) {
+
+@media screen and (max-width: 1024px) {
+
+  .work-row .work-column {
+    flex: 1 1 20rem;
+    margin-left: 8vh;
+    margin-right: 8vh;
+  }
+
+  .project-images img {
+    justify-content: center;
+    width: 355px;
+    height: 210px;
+    border-radius: 5px; /* Optional: Add border radius for rounded corners */
+    margin-bottom: 15px;
+  }
+
+  .project-images2 img {
+    justify-content: center;
+    width: 710px;
+    height: 420px;
+    border-radius: 5px; /* Optional: Add border radius for rounded corners */
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
 
     /* Reduce the font size of buttons and their contents */
 
@@ -652,47 +693,94 @@ html {
       margin-left: 5vh;
       margin-right: 5vh;
     }
+
+    .project-images {
+      flex-direction: column; /* Stack images vertically on smaller screens */
+    }
+
+    .project-images img {
+      justify-content: center;
+      width: 525px;
+      height: 295px;
+      border-radius: 5px; /* Optional: Add border radius for rounded corners */
+      margin-bottom: 15px;
+    }
+
+    .project-images2 img {
+      justify-content: center;
+      width: 525px;
+      height: 295px;
+      border-radius: 5px; /* Optional: Add border radius for rounded corners */
+    }
+
   }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 425px) {
 
     .button-style {
-      font-size: 1.7vw; /* Adjust the font size as needed */
-      padding: 0.5rem; /* Adjust the padding as needed */
-      margin: 0 7px;
-    }
-  
-    /* Reduce the font size of the active button */
-    .controls .active-btn {
-      font-size: 1.7vw; /* Adjust the font size as needed */
+      width: px;
+      height: 50px;
     }
 
-    .button-style {
-      width: 17vw;
-      height: 40px;
+    .controls span {
+      display: none;
     }
 
-    .button-style i {
-      margin-right: 15px;
+    .control-text-icon i {
+      font-size: 20px;
+      margin: 0 auto; /* Center horizontally */
+      text-align: center; /* Additional centering for text within the <i> tags, if needed */
     }
 
     #about_me {
       text-align: center; /* Align text to the left */
       max-width: 100%;
-      min-width: 575px;
+      min-width: 400px;
       padding: 20px;
       margin: 0;
-      font-size: 0.85rem;
+      font-size: 0.7rem;
       margin-top: -25px;
     }
 
+    .button_controls {
+      display: flex;
+      justify-content: center;
+      align-items: center; /* Vertically center the buttons */
+      flex-direction: column; /* Allow buttons to wrap to the next line if necessary */
+      margin-top: -25px; /* Adjust as needed */
+    }
+    
     .icon-container i {
-      font-size: 28px;
+      font-size: 25px;
       margin: 0 10px; 
     }
+
+    .skills-content .progress h3 {
+      font-size: .87rem;
+    }
+
+    .project-images img {
+      justify-content: center;
+      width: 300px;
+      height: 168px;
+      border-radius: 5px; /* Optional: Add border radius for rounded corners */
+      margin-bottom: 15px;
+    }
+
+    .project-images2 img {
+      justify-content: center;
+      width: 300px;
+      height: 168px;
+      border-radius: 5px; /* Optional: Add border radius for rounded corners */
+    }
+
+    .project-images {
+      flex-direction: column; /* Stack images vertically on smaller screens */
+    }
+    
 }
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 375px) {
       
       .button-style {
         width: px;
@@ -735,9 +823,28 @@ html {
       .skills-content .progress h3 {
         font-size: .87rem;
       }
+
+      .project-images img {
+        justify-content: center;
+        width: 250px;
+        height: 140px;
+        border-radius: 5px; /* Optional: Add border radius for rounded corners */
+        margin-bottom: 15px;
+      }
+
+      .project-images2 img {
+        justify-content: center;
+        width: 250px;
+        height: 140px;
+        border-radius: 5px; /* Optional: Add border radius for rounded corners */
+      }
+
+      .project-images {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+      }
       
     }
-      @media screen and (max-width: 400px) {
+      @media screen and (max-width: 320px) {
       
       #about_me {
         text-align: center; /* Align text to the left */
@@ -752,6 +859,27 @@ html {
       .button_controls {
         margin-top: -25px; /* Adjust as needed */
       }
+
+      .project-images {
+        width: 100%;
+        height: auto;
+      }
+
+      .project-images img {
+        justify-content: center;
+        width: 200px;
+        height: 112px;
+        border-radius: 5px; /* Optional: Add border radius for rounded corners */
+        margin-bottom: 5px;
+      }
+
+      .project-images img {
+        justify-content: center;
+        width: 200px;
+        height: 112px;
+        border-radius: 5px; /* Optional: Add border radius for rounded corners */
+      }
+
     }
 
 
