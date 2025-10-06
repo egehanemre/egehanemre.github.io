@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Egehan EMRE</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet" />
 </head>
 
 <body>
+    <header class="site-header">
+        <div class="portrait" role="banner">
+            <h1 class="name">Egehan EMRE</h1>
 
-    <header>
+            <img
+                src="https://avatars.githubusercontent.com/u/63051979?v=4"
+                alt="Portrait of Egehan Emre"
+                class="portrait-image"
+            />
 
-        <div class="portrait">
-            <p>Egehan EMRE</p>
-            <img src="https://avatars.githubusercontent.com/u/63051979?v=4" alt="Portrait Image">
+            <div class="icon-container" aria-label="Social links">
+                <a href="https://github.com/egehanemre" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
 
-            <div class="icon-container">
+                <a href="mailto:16008122049@ogr.bozok.edu.tr" aria-label="Email">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
 
-            <a href="https://github.com/egehanemre" target="_blank">
-                <i class="fab fa-github fa-2x"></i> 
-            </a>
-
-            <a href="mailto:16008122049@ogr.bozok.edu.tr">
-                <i class="fas fa-envelope fa-2x"></i>
-            </a>
-
-            <!-- <a href="https://www.youtube.com/@eggy_35" target="_blank">
-                <i class="fab fa-youtube fa-2x"></i>
-            </a> -->
-
-            <a href="https://www.linkedin.com/in/egehanemre/" target="_blank">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-
+                <a href="https://www.linkedin.com/in/egehanemre/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in fa-2x" aria-hidden="true"></i>
+                </a>
             </div>
 
-                    <div id="about_me">
-                        Welcome to my digital playground. I'm Egehan, a seasoned game programmer, driven by a lifelong love for games. My mission is to create immersive experiences that evoke the same wonder and joy i felt growing up.
-                    </div>    
+            <p id="about_me" class="about">
+                I'm Egehan, a 4th-year computer engineering student and game programmer with 2+ years of experience in Unity, specializing in systems and gameplay programming.
+            </p>
         </div>
     </header>
 
@@ -51,69 +54,61 @@
 
                     <button id=button class="button-style control-1 control-text-icon " data-id="projects"> 
                         <i class="fas fa-gamepad fa-lg"></i>
-                        <span>PROJECTS</span>
+                        <span>GAMES</span>
                     </button>
 
-                    <button id=button class="button-style control-2 control-text-icon " data-id="skills">
+                    <button id=button class="button-style control-2 control-text-icon " data-id="systems">
                         <i class="fas fa-code fa-lg"></i>
-                        <span>SKILLS</span>
+                        <span>SYSTEMS/TOOLS</span>
                     </button>                   
-
-                    <button id=button class="button-style control-3 control-text-icon " data-id="education">
-                        <i class="fas fa-graduation-cap fa-lg"></i> 
-                        <span>EDUCATION</span>
-                    </button>
-
-                    <button id=button class="button-style control-4 control-text-icon " data-id="work">
-                        <i class="fas fa-briefcase fa-lg"></i>
-                            <span>WORK</span>
-                    </button>
-                       
                 </div>
             </div>
         </nav>        
 
         <div class="pages">
-
             <section id="projects" class="one">
-                <h1>Here are my projects! Click to navigate</h1><br>
+                <h1>Here are my finished games! Click to get more details</h1><br>
                 <div class="projects-container">
                     <button class="project-button" data-project="project1">
                         <img src="images/Gunslinger.png" alt="Project 1">
                     </button>
                     <button class="project-button" data-project="project2">
-                        <img src="images/ScaleMage.png" alt="Project 2">
+                        <img src="images/Bellatorum.png" alt="Project 2">
                     </button>
                     <button class="project-button" data-project="project3">
-                        <img src="images/AngryRocket.png" alt="Project 3">
+                        <img src="images/ParasiteTower1.png" alt="Project 3">
                     </button>
                     <button class="project-button" data-project="project4">
-                        <img src="images/VoidSurvivor.png" alt="Project 4">
+                        <img src="images/ScaleMage.png" alt="Project 4">
                     </button>
                     <button class="project-button" data-project="project5">
-                        <img src="images/GaltonBoard.png" alt="Project 5">
+                        <img src="images/AngryRocket.png" alt="Project 5">
                     </button>
                     <button class="project-button" data-project="project6">
-                        <img src="images/KeyboardTennis.jpg" alt="Project 6">
+                        <img src="images/VoidSurvivor.png" alt="Project 6">
+                    </button>
+                    <button class="project-button" data-project="project7">
+                        <img src="images/GaltonBoard.png" alt="Project 7">
+                    </button>
+                    <button class="project-button" data-project="project8">
+                        <img src="images/KeyboardTennis.jpg" alt="Project 8">
                     </button>
                 </div>
-                
+
+                <!-- Project 1 Details -->
                 <div class="project-content" id="project1">
                     <div class="project-details">
-                        <!-- <img src="images/Gunslinger.png" alt="Project 1 Description Image"> -->
                         <div class="project-text">
                             <br><br>
                                 <h1 style="font-size:45px;"><mark>Gunslinger</mark></h1>
                                 <h4> A Roguelike, Turn-Based Card Game</h4>
                                 <br>
-                            <!-- <h2>Key Programming Contributions: </h2> -->
                             <h3>Introduction</h3>
-                            <p>Gunslinger is a Roguelike, Turn-Based Card game, heavily inspired by Slay the Spire. This project was developed over the course of one month as the final project for the <a href="https://yapayzekaveteknolojiakademisi.com/"><u>Google Oyun ve Uygulama Akademisi</u> </a>, with a two-person team consisting of myself as the programmer and an artist. The goal was to create a unique card-based game experience that blends deck-building mechanics with turn-based combat, offering players strategic choices as they progress through procedurally generated stages.</p>
-                            <p>During this project, I learned how to implement core game systems, including card mechanics, a turn-based combat system, and a procedural map with stages and progression. I also tackled various technical challenges such as storing card data, managing player and enemy game states, and ensuring smooth transitions between different phases of the game.</p>
+                            <p>Gunslinger is a Roguelike, turn-based card game inspired by Slay the Spire. It was developed in a month as the final project for the <a href="https://yapayzekaveteknolojiakademisi.com/"><u>Google Game and Application Academy</u> </a> by a two-person team — me as the programmer and an artist. The game combines deck-building and turn-based combat, offering strategic choices across procedurally generated stages.</p>
 
                             <h3>1. Turn-Based Combat System</h3>
-                            <p>Implemented a turn-based combat system where each card represents an action or bullet type, which is added to the player’s magazine. At the end of each turn, all bullets are fired based on player choices.</p>
-                            <p>Designed enemy action anticipation mechanics, allowing players to counter enemy moves by strategically placing bullets, adding tactical depth to combat.</p>
+                            <p>Built a turn-based combat system where each card acts as an action or bullet type that fills the player’s magazine. At the end of the turn, all loaded bullets are fired based on the player’s choices and apply damage and effects of bullets to enemies.
+Also added an enemy intent system that lets players anticipate upcoming attacks.</p>
                         </div>
                     </div>
                     <div class="project-images">
@@ -121,14 +116,13 @@
                         <img src="images/Gunslinger2.png" alt="Image 2 Description">
                     </div>
                     <div class="project-text">
-                        <h3>2. Combat Mechanics</h3>
-                        <p>Developed the card system with three card types: attack, effect, and buff. Implemented logic to allow players to customize and enhance their deck through combat rewards and item drops.</p>
-                        <p>Programmed the combat manager to control enemy AI behavior, manage player turns, and handle the logic for firing bullets and applying effects.
-                        Implemented a turn manager that governs the flow of combat, ensuring that both player and enemy actions are executed in the correct sequence with all interactions processed accurately.</p>
+                        <h3>2. Game Mechanics</h3>
+                        <p>Developed the card system with three card types: attack, effect, and buff. Implemented logic to allow players to customize their deck through combat rewards and item drops.</p>
+                        <p>Programmed the combat manager to control enemy AI behavior, manage player turns, and handle the logic for firing bullets and applying effects. Also made a shop system where you can purchase random cards.</p>
                     </div>
                     <div class="project-text">
                         <h3>3. Map Algorithm</h3>
-                        <p>Designed and coded a procedural map generation system to ensure varied gameplay in each run. The algorithm dynamically places nodes, representing different challenges and rewards, allowing for diverse paths through the game world.</p>
+                        <p>Designed a procedural map generation system to ensure varied gameplay in each run. The algorithm dynamically places nodes, representing different challenges and rewards.</p>
                         <div class="project-images">
                             <img src="images/Gunslinger3.png" alt="Image 1 Description">
                             <img src="images/Gunslinger4.png" alt="Image 2 Description">
@@ -141,7 +135,81 @@
                     </div>
                 </div>
 
+                 <!-- Project 2 Details -->
                 <div class="project-content" id="project2">
+                    <div class="project-details">
+                        <div class="project-text">
+                            <br><br>
+                                <h1 style="font-size:45px;"><mark>Bellatorum</mark></h1>
+                                <h4> 3D Gladiator AutoBattler</h4>
+                                <br>
+                            <h3>Introduction</h3>
+                            <p>Bellatorum is a 3D Gladiator AutoBattler where players build a team of gladiators and watch them fight automatically in tactical combat encounters. The project was developed in one month together with a game designer who handled the combat logic and design, while I was responsible for all programming and implementation..  
+                            
+
+                            <h3>1. Shop System</h3>
+                            <p>Created a shop system where players can purchase gladiators using in-game currency. Each shop refresh offers a randomized set of units, allowing for varied strategies each round.</p>
+                            <p>Implemented logic for unit purchasing, placement into the player’s roster, and upgrade mechanics when duplicates are bought, ensuring progression feels rewarding.</p>
+                        </div>
+                    </div>
+                    <div class="project-images2">
+                        <img src="images/Bellatorum4.png" alt="Gladiator Shop Screenshot">
+                        
+                    </div>
+                    <div class="project-text">
+                        <h3>2. Combat System</h3>
+                        <p>Developed the core auto-battle system where gladiators fight without direct player control. Each unit executes attacks and abilities automatically according to their AI and targeting logic.</p>
+                        <p>Implemented different targeting strategies (e.g., nearest enemy, lowest health, random target), making battles unpredictable and encouraging players to plan team compositions carefully.</p>
+                    <div class="project-images">
+                        <img src="images/Bellatorum5.png" alt="Gladiator Shop Screenshot">
+                        <img src="images/Bellatorum2.png" alt="Gladiator Combat Screenshot">
+                    </div>
+                    </div>
+                    <div class="project-text">
+                        <h3>3. Unit Management</h3>
+                        <p>Worked with 3D gladiator prefabs, animations, and ability triggers to bring the units to life in combat. Each gladiator has stats such as health, damage, and attack speed that scale with upgrades.</p>
+                        <p>Designed a combat manager to oversee turn flow, damage calculation, win/loss conditions, and smooth transitions between shop and battle phases. I gave my designer tools to create different gladiator units.</p>
+                        <div class="project-images">
+                            <img src="images/Bellatorum3.png" alt="Combat Arena Screenshot">
+                            <img src="images/Bellatorum4.png" alt="Units Fighting Screenshot">
+                        </div>
+                    </div>
+                    <div class="project-text">
+                        <br><br>
+                            <h1 style="font-size:45px;"><a href="https://eggy3.itch.io/bellatorum"><u>Play Bellatorum</u></a></h1>
+                            <br><br>
+                    </div>
+                </div>
+
+                <!-- Project 3 Details -->
+                <div class="project-content" id="project3">
+                    <div class="project-details">
+                        <div class="project-text">
+                            <br><br>
+                                <h1 style="font-size:45px;"><mark>Parasite Tower</mark></h1>
+                                <h4> A Survival Game made for GMTK2024 Jam</h4>
+                                <br>
+                            <h3>Introduction</h3>
+                            <p>As part of a 6-person team for the GMTK Game Jam, we developed a game based on the theme "Built to Scale." The goal of the game was to creatively incorporate scaling mechanics as part of the core gameplay experience. I took on the role of a gameplay programmer, where my primary contribution was designing and implementing a shrink gun mechanic. This mechanic allowed players to shrink objects within the game world, adding both puzzle-solving elements and interactive gameplay based on size manipulation.</p>
+
+                            <h3>Mechanics</h3>
+                            <p>My primary responsibility was designing and implementing the shrink gun mechanic, which allowed players to shrink objects in the environment. This added a layer of interactive gameplay, allowing players to solve puzzles by resizing objects.</p>
+                            <p>Additionally, I designed a damage system that calculated damage to enemies based on both the scale and velocity of the objects thrown at them. This system added a physics-based combat element, rewarding players for their skill in managing object size and throwing speed to deal more damage.</p>
+                        </div>
+                    </div>
+                    <div class="project-images">
+                        <img src="images/ParasiteTower.png" alt="Image 1 Description">
+                        <img src="images/ParasiteTower2.png" alt="Image 2 Description">
+                    </div>
+                    <div class="project-text">
+                        <br><br>
+                            <h1 style="font-size:45px;"><a href="https://eggy3.itch.io/parasitetower"><u>Play Parasite Tower</u> </a></h1>
+                            <br><br>
+                    </div>
+                </div>
+
+                <!-- Project 4 Details -->
+                <div class="project-content" id="project4">
                     <div class="project-details">
                         <div class="project-text">
                             <br><br>
@@ -167,7 +235,8 @@
                     </div>
                 </div>
 
-                <div class="project-content" id="project3">
+                <!-- Project 5 Details -->
+                <div class="project-content" id="project5">
                     <div class="project-details">
                     <div class="project-text">
                         <br><br>
@@ -192,7 +261,8 @@
                 </div>
             </div>
 
-                <div class="project-content" id="project4">
+            <!-- Project 6 Details -->
+                <div class="project-content" id="project6">
                     <div class="project-details">
                     <div class="project-text">
                         <br><br>
@@ -219,8 +289,8 @@
                 </div>
                 </div>
 
-
-                <div class="project-content" id="project5">
+            <!-- Project 7 Details -->
+                <div class="project-content" id="project7">
                     <div class="project-details">
                     <div class="project-text">
                         <br><br>
@@ -245,7 +315,8 @@
                 </div>
                 </div>
 
-                <div class="project-content" id="project6">
+                <!-- Project 8 Details -->
+                <div class="project-content" id="project8">
                     <div class="project-details">
                     <div class="project-text">
                         <br><br>
@@ -268,164 +339,68 @@
                         <br><br>
                 </div>
                 </div>
+
+               
             </section>
-        
-            <section id="skills" class="two">
-        
-                <section class="skills-inside" id="skills-inside">
-        
-                    <div class="skills-row">
-        
-                        <div class="skills-column">
-                            <h3 class="title">Coding Skills</h3>
-                            
-                            <div class="skills-box">
-                                <div class="skills-content"> 
-        
-                                    <ul class="badge-list">
-                                        <li class="badge">C</li>
-                                        <li class="badge">C++</li>
-                                        <li class="badge">C#</li>
-                                        <li class="badge">JavaScript</li>
-                                        <li class="badge">GDscript</li>
-                                    </ul>
-        
-                                </div>
-                            </div>
-                        </div>
-        
-                        <div class="skills-column">
-                            <h3 class="title">Others</h3>
-        
-                            <div class="skills-box">
-                                <div class="skills-content"> 
-                                    <ul class="badge-list">
-                                        <li class="badge">Unity</li>
-                                        <li class="badge">Godot</li>
-                                        <li class="badge">Git</li>
-                                        <li class="badge">OpenGL</li>
-                                        <li class="badge">Movavi</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                </section>
-
-            </section>
-
-            <section id="education" class="three">
-
-                <section class="edu-inside">
-                    <h2 class="heading"></h2>
-
-                    <div class="education-row">
-                        <div class="education-column">
-                            <h2 class="title">School</h2>
-
-                            <div class="education-box">
-                                <div class="education-content">
-                                    <div class="content">
-                                        <div class="year"><i class="fas fa-calendar-alt"></i> 2022 - Present </div>
-                                        <h3> University - Bozok University </h3>
-                                        <br>
-                                        <p1> Computer Engineering Student - 3rd Year <br><br></be>Currently focusing on C#, C++, Engine Developement and Unity Engine</p1>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="education-column">
-                            <h2 class="title">Additional Courses</h2>
-
-                            <div class="education-box">
-                                <div class="education-content">
-                                    <div class="content">
-                                        <div class="year"><i class="fas fa-calendar-alt"></i> 2024 </div>
-                                        <h3> Unity Technologies - Programmer </h3>
-                                        <br>
-                                        <p1> Learned to write scripts in C# to create interactive experiences with the Unity Editor.</p1>
-                                        <p1><p5><br><br> <a href="https://www.credly.com/badges/29ac6d1c-3387-490c-91d9-0b60ced6b1fb/linked_in_profile" target=”_blank”>"Click to see my certificate"</a> </p5></p1>
-                                    </div>
-                                </div>
-                            
-                                <div class="education-content">
-                                    <div class="content">
-                                        <div class="year"><i class="fas fa-calendar-alt"></i> 2024 </div>
-                                        <h3> Google - Game Development </h3>
-                                        <br>
-                                        <p1> Gained knowledge of various software topics relevant to game development.</p1>
-                                        <p1><p5><br><br> <a href="https://verified.sertifier.com/tr/verify/91140843235936/" target=”_blank”>"Click to see my certificate"</a> </p5></p1>
-                                    </div>
-                                </div>
-                            
-                                <div class="education-content">
-                                    <div class="content">
-                                        <div class="year"><i class="fas fa-calendar-alt"></i> 2023 </div>
-                                        <h3> Harvard - CS50 </h3>
-                                        <br>
-                                        <p1> Learned the fundamentals of computer science and programming.</p1>
-                                        <p1><p5><br><br> <a href="https://ibb.co/nP7QTYh" target=”_blank”>"Click to see my certificate"</a> </p5></p1>
-                                    </div>
-                                </div>
-                            
-                                <div class="education-content">
-                                    <div class="content">
-                                        <div class="year"><i class="fas fa-calendar-alt"></i> 2014 </div>
-                                        <h3> CoderDojo </h3>
-                                        <br>
-                                        <p1> Acquired foundational programming skills designed for kids.</p1>
-                                    </div>
-                                </div>
-                            </div>
-                            
-
-                    </div>
-                </section>
-            </section>
-
-                <section id="work" class="four">
-
-                    <section class="work-inside">
-                        <h2 class="heading"></h2>
-
-                        <div class="work-row">
-                            <div class="work-column">
-                                <h2 class="title">My Work Experience</h2>
-
-                                <div class="work-box">
-                                    <div class="work-content">
-                                        <div class="content">
-                                            <div class="year"><i class="fas fa-calendar-alt"></i> 2024.03 - 2024.07 </div>
-                                            <h2> Gameplay Programmer </h2>
-                                            <br>
-                                            <p1> I've worked for PolygonSoft Games and published  <a href="https://store.steampowered.com/app/2975660/Keyboard_Tennis/" target=”_blank” style="color:cyan;">"KeyboardTennis"</a> on Steam. <br><br></p1>
-                                        </div>    
-                                    </div>
-                                </div>
-                                <div class="work-box">
-                                    <div class="work-content">
-                                        <div class="content">
-                                            <div class="year"><i class="fas fa-calendar-alt"></i> 2018 - 2021 </div>
-                                            <h2> Video Editor </h2>
-                                            <br>
-                                            <p1> I've worked for streamers on Twitch such as <a href="https://www.twitch.tv/k3soju" target=”_blank” style="color:purple;">"k3soju"</a> and different content creators such as <a href="https://www.youtube.com/@Burhi" target=”_blank”>"Burhi"</a> on Youtube. <br><br></p1>
-                                        </div>    
-                                    </div>
-                                </div>
-                            
-                        </div>            
-                    </section>
-
-                </section>
-
-            </section>
-
         </div>
 
+  <div class="pages">
+    <section id="systems" class="two">
+        <h1>A showcase of gameplay systems, tools, and mechanics I’ve developed for ongoing or unreleased projects.</h1><br>
 
+        <div class="projects-container">
+            <button class="project-button" data-project="system1">
+                <img src="images/FTL.png" alt="System 1">
+            </button>
+        </div>
+
+        <!-- System 1 Details -->
+        <div class="project-content" id="system1">
+            <div class="project-details">
+                <div class="project-text">
+                    <br><br>
+                        <h1 style="font-size:45px;"><mark>ProjectSSS</mark></h1>
+                        <h4>FTL inspired game</h4>
+                        <br>
+                    <h3>Introduction</h3>
+                    <p>For Gunslinger, I implemented the core systems such as the turn-based combat manager, 
+                       card handling, and procedural map generator. These systems were designed to be modular 
+                       and reusable for future projects.</p>
+
+                    <h3>1. Ship Editor Tool</h3>
+                    <p>Implemented custom tool in editor for designers to create ships with dynamic armoured walls and rooms type/sizes and load to runtime.</p>
+
+                </div>
+            </div>
+            <div class="project-images">
+                <img src="images/FTL3.png" alt="System Screenshot 1">
+                <img src="images/FTL2.png" alt="System Screenshot 2">
+            </div>
+            <div class="project-text">
+                <h3>2. Crewmates</h3>
+                <p>Made crewmate units with different stats like move speed, dmg, hp and added pathfinding with A* in rendered ships</p>
+            </div>
+            <div class="project-images2">
+                <img src="images/FTLgif9.gif" alt="System Screenshot 3">
+            </div>
+            <div class="project-text">
+                <h3>3. Combat System</h3>
+                <p>Created a realtime ship combat system with different weapon types, projectiles, enemy AI and damage system to different rooms and enemies, projectiles have different pen values and respect different armor layers .</p>
+            </div>
+            <div class="project-images2">
+            <img src="images/FTLgif4.gif" alt="System Screenshot 5">
+            </div>
+            <div class="project-text">
+                <br><br>
+                    <h1 style="font-size:45px;">
+                        <a href="https://eggy3.itch.io/gunslinger"><u>Play Gunslinger</u></a>
+                    </h1>
+                <br><br>
+            </div>
+        </div>
+    </section>
+</div>
         <script src="app.js"></script>
-
-</body>
+    </body>
 </html>
 
