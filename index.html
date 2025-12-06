@@ -106,8 +106,8 @@
                             <h3>Introduction</h3>
                             <p>Gunslinger is a Roguelike, turn-based card game inspired by Slay the Spire. It was developed in a month as the final project for the <a href="https://yapayzekaveteknolojiakademisi.com/"><u>Google Game and Application Academy</u> </a> by a two-person team — me as the programmer and an artist. The game combines deck-building and turn-based combat, offering strategic choices across procedurally generated stages.</p>
 
-                            <h3>1. Turn-Based Combat System</h3>
-                            <p>Built a turn-based combat system where each card acts as an action or bullet type that fills the player’s magazine. At the end of the turn, all loaded bullets are fired based on the player’s choices and apply damage and effects of bullets to enemies.
+                            <h3>1. Turn-Based Combat</h3>
+                            <p>I built a turn-based combat system where each card acts as an action or bullet type that fills the player’s magazine. At the end of the turn, all loaded bullets are fired based on the player’s choices and apply damage and effects of bullets (like bleed debuff) to enemies.
 Also added an enemy intent system that lets players anticipate upcoming attacks.</p>
                         </div>
                     </div>
@@ -117,11 +117,12 @@ Also added an enemy intent system that lets players anticipate upcoming attacks.
                     </div>
                     <div class="project-text">
                         <h3>2. Game Mechanics</h3>
-                        <p>Developed the card system with three card types: attack, effect, and buff. Implemented logic to allow players to customize their deck through combat rewards and item drops.</p>
-                        <p>Programmed the combat manager to control enemy AI behavior, manage player turns, and handle the logic for firing bullets and applying effects. Also made a shop system where you can purchase random cards.</p>
+                        <p>Designed the card system with three card types: attack, effect, and buff. Implemented logic to allow players to customize their deck through combat rewards and item drops.</p>
+                        <p>Implemented combat manager to control enemy AI behavior, manage player turns, and handle the logic for firing bullets and applying effects. Also made a shop system where you can purchase random cards.</p>
+                        <p>Designed different enemy types with different intents which can use their debuff/attack skills with certain logic</p>
                     </div>
                     <div class="project-text">
-                        <h3>3. Map Algorithm</h3>
+                        <h3>3. Procedural Map Algorithm</h3>
                         <p>Designed a procedural map generation system to ensure varied gameplay in each run. The algorithm dynamically places nodes, representing different challenges and rewards.</p>
                         <div class="project-images">
                             <img src="images/Gunslinger3.png" alt="Image 1 Description">
@@ -355,11 +356,17 @@ Also added an enemy intent system that lets players anticipate upcoming attacks.
 
   <div class="pages">
     <section id="systems" class="two">
-        <h1>A showcase of gameplay systems, tools, and mechanics I’ve developed for ongoing or unreleased projects.</h1><br>
+        <h2>A showcase of gameplay systems, tools, and mechanics I’ve developed for ongoing or unreleased projects.</h2><br>
 
         <div class="projects-container">
             <button class="project-button" data-project="system1">
-                <img src="images/FTL.png" alt="System 1">
+                <img src="images/FTLgif8.gif" alt="System 1">
+            </button>
+            <button class="project-button" data-project="system2">
+                <img src="images/searchlights2.gif" alt="System 2">
+            </button>
+            <button class="project-button" data-project="system3">
+                <img src="images/arpg.png" alt="System 3">
             </button>
         </div>
 
@@ -385,29 +392,84 @@ Also added an enemy intent system that lets players anticipate upcoming attacks.
             </div>
             <div class="project-text">
                 <h3>2. Crewmates</h3>
-                <p>Made crewmate units with different stats like move speed, dmg, hp and added pathfinding with A* in rendered ships</p>
+                <p>Made crewmate units with different stats like move speed, dmg, hp and added pathfinding with A* in rendered grid based ships</p>
             </div>
             <div class="project-images2">
                 <img src="images/FTLgif9.gif" alt="System Screenshot 3">
             </div>
             <div class="project-text">
                 <h3>3. Combat System</h3>
-                <p>Created a realtime ship combat system with different weapon types, projectiles, enemy AI and damage system to different rooms and enemies, projectiles have different pen values and respect different armor layers .</p>
+                <p>Created a realtime ship combat system with different weapon types, projectiles, enemy AI and damage system to different rooms and enemies, projectiles have different penetration values and respect different armor layers tiers.</p>
             </div>
             <div class="project-images2">
             <img src="images/FTLgif4.gif" alt="System Screenshot 5">
             </div>
+
+            <h1 style="font-size:45px;"><a href="https://github.com/egehanemre/Project-SSS"><u>Check Repository</u> </a></h1>
+
+        </div>
+
+         <!-- System 2 Details -->
+        <div class="project-content" id="system2">
+            <div class="project-details">
+                <div class="project-text">
+                    <br><br>
+                        <h1 style="font-size:45px;"><mark>Orbs And Dash</mark></h1>
+                        <h4>Sonic Inspired</h4>
+                        <br>
+                    <h3>Introduction</h3>
+                    <p>This is a ongoing private project I'm working on with 14 other contributors.</p>
+
+                    <h3>Gameplay Mechanics</h3>
+                    <p>Worked on different interactable objects like Mystery Spell that gives random effects on collision</p>
+                </div>
+            </div>
+            <div class="project-images">
+                <img src="images/OrbsAndDash5.png" alt="System Screenshot 1">
+                <img src="images/OrbsAndDash4.png" alt="System Screenshot 2">
+            </div>
+            <br><br>
+            <h3>Level Design Tool</h3>
+            <p>Created a level design tool for designers to create levels with different obstacles and orbs that give different abilities.</p>
+            <div class="project-images2">
+                <img src="images/spinning_walls_v2.gif" alt="System Screenshot 3">
+            </div>
             <div class="project-text">
-                <br><br>
-                    <h1 style="font-size:45px;">
-                        <a href="https://eggy3.itch.io/gunslinger"><u>Play Gunslinger</u></a>
-                    </h1>
-                <br><br>
+                <h3>Customization System</h3>
+                <p>Implemented a customization tool allowing players to modify their characters with different skins and accessories.</p>
+                <div class="project-images">
+                    <img src="images/OrbsAndDash.png" alt="System Screenshot 5">
+                    <img src="images/LevelSelectionTool.png" alt="System Screenshot 6">
+                </div>
+            </div>    
+        </div>
+
+         <!-- System 3 Details -->
+    <div class="project-content" id="system3">
+        <div class="project-details">
+            <div class="project-text">
+                <br>
+                <h1 style="font-size:45px;"><mark>Roguelike-ARPG</mark></h1>
+                <h4>ARPG Tool</h4>
+                <br>
+
+                <h3>Introduction</h3>
+                <p>This tool was originally created for an internal project. It supports generating different projectile and AI behavior configurations, along with navigation capabilities. I can provide more information upon request, where allowed.</p>
+
+                <div class="project-images">
+                    <img src="images/arpg2.png" alt="System Screenshot 1">
+                    <img src="images/arpg3.png" alt="System Screenshot 2">
+                </div>
+                <br>
             </div>
         </div>
+    </div>
+
+    
+
     </section>
 </div>
         <script src="app.js"></script>
-    </body>
+    </body> 
 </html>
 
