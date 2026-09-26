@@ -1,129 +1,51 @@
-const sections = document.querySelectorAll('.section');
-const buttons = document.querySelectorAll('#button');
-const AllSections = document.querySelectorAll('.section');
-const contentContainers = document.querySelectorAll('.content');
-const button_scroll = document.querySelectorAll('.button-style');
-const section_scroll = document.querySelectorAll('.pages section');
-
-document.querySelectorAll('.project-button').forEach(button => {
-    button.addEventListener('click', () => {
-        const isActive = button.classList.contains('active');
-
-        document.querySelectorAll('.project-button').forEach(btn => {
-            btn.classList.remove('active');
-        });
-
-        if (!isActive) {
-            button.classList.add('active');
-        }
-
-        const projectId = button.getAttribute('data-project');
-        document.querySelectorAll('.project-content').forEach(content => {
-            content.classList.remove('active');
-        });
-
-        if (!isActive) {
-            const projectContent = document.getElementById(projectId);
-            projectContent.classList.add('active');
-
-            const projectDetails = projectContent.querySelector('.project-details');
-            if (projectDetails) {
-                projectDetails.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
+const tabs = [...document.querySelectorAll('[role="tab"]')];
+const panels = [...document.querySelectorAll('[role="tabpanel"]')];
+const cards = [...document.querySelectorAll('.project-button')];
+const details = [...document.querySelectorAll('.project-content')];
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+function closeProjects() {
+    cards.forEach(card => card.setAttribute('aria-expanded', 'false'));
+    details.forEach(detail => { detail.hidden = true; });
+}
+function selectTab(tab) {
+    closeProjects();
+    tabs.forEach(item => {
+        const selected = item === tab;
+        item.setAttribute('aria-selected', String(selected));
+        item.tabIndex = selected ? 0 : -1;
+    });
+    panels.forEach(panel => { panel.hidden = panel.id !== tab.dataset.id; });
+}
+tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => selectTab(tab));
+    tab.addEventListener('keydown', event => {
+        let next;
+        if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+        if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+        if (event.key === 'Home') next = 0;
+        if (event.key === 'End') next = tabs.length - 1;
+        if (next === undefined) return;
+        event.preventDefault();
+        selectTab(tabs[next]);
+        tabs[next].focus();
     });
 });
-
-function PageTransitions() {
-    buttons.forEach((button) => {
-        button.addEventListener('click', function (event) {
-            event.preventDefault();
-
-            const isActive = this.classList.contains('active-btn');
-            const targetSectionId = this.getAttribute('data-id');
-            
-            buttons.forEach((btn) => {
-                btn.classList.remove('active-btn');
-            });
-
-            section_scroll.forEach(section => {
-                section.style.display = 'none';
-            });
-
-            if (!isActive) {
-                this.classList.add('active-btn');
-            }
-
-            const targetSection = document.getElementById(targetSectionId);
-            if (targetSection) {
-                targetSection.style.display = isActive ? 'none' : 'block';
-
-                if (!isActive) {
-                    targetSection.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-
-            const eduInsideSection = document.querySelector('.edu-inside');
-            if (eduInsideSection) {
-                eduInsideSection.style.display = isActive ? 'none' : 'block';
-            }
-
-            const systemsInsideSection = document.querySelector('.systems-inside');
-            if (systemsInsideSection) {
-                systemsInsideSection.style.display = isActive ? 'none' : 'block';
-            }
-
-            const workInsideSection = document.querySelector('.work-inside');
-            if (workInsideSection) {
-                workInsideSection.style.display = isActive ? 'none' : 'block';
-            }
-        });
+cards.forEach(card => {
+    const detail = document.getElementById(card.dataset.project);
+    card.addEventListener('click', () => {
+        const wasOpen = !detail.hidden;
+        closeProjects();
+        if (wasOpen) return;
+        card.setAttribute('aria-expanded', 'true');
+        detail.hidden = false;
+        detail.focus({ preventScroll: true });
+        detail.scrollIntoView({ behavior: reducedMotion.matches ? 'instant' : 'smooth', block: 'start' });
     });
-}
-
-PageTransitions();
-
-document.querySelectorAll('#button').forEach(button => {
-    button.addEventListener('click', () => {
-        const isActive = button.classList.contains('active');
-
-        document.querySelectorAll('#button').forEach(btn => {
-            btn.classList.remove('active');
-        });
-
-        if (!isActive) {
-            button.classList.add('active');
-        }
-
-        const targetId = button.getAttribute('data-id');
-        document.querySelectorAll('.section').forEach(section => {
-            section.classList.remove('active');
-        });
-
-        if (!isActive) {
-            const targetSection = document.getElementById(targetId);
-            targetSection.classList.add('active');
-
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-
-        if (targetId === 'education') {
-            const eduInsideSection = document.querySelector('.edu-inside');
-            if (eduInsideSection) {
-                eduInsideSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        } else if (targetId === 'work') {
-            const workInsideSection = document.querySelector('.work-inside');
-            if (workInsideSection) {
-                workInsideSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        } else if (targetId === 'systems') {
-            const systemsInside = document.querySelector('.systems-inside');
-            if (systemsInside) {
-                systemsInside.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    });
+    const close = () => {
+        closeProjects();
+        card.focus({ preventScroll: true });
+        card.scrollIntoView({ behavior: reducedMotion.matches ? 'instant' : 'smooth', block: 'center' });
+    };
+    detail.querySelector('.close-project').addEventListener('click', close);
+    detail.addEventListener('keydown', event => { if (event.key === 'Escape') close(); });
 });
